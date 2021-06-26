@@ -9,15 +9,12 @@
   margin: 3rem auto;
 }
 
-
 .main-modal {
   min-height: 100px;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(242, 251, 110, 0.65);
+  background-color: rgba(224, 224, 223, 0.45);
   padding: 20px;
   border: 2px solid #000;
   margin-bottom: 1rem;
@@ -25,27 +22,22 @@
 
 .para {
   height: 100px;
-  width: 80%;
-  padding: 1rem;
-
+  padding-right: 50px;
+  text-align: justify;
+  width: 100%;
 }
 
-.btn {
-  width: 20%;
+.button {
+  width: 150px;
 }
-
 
 .contained-modal {
-
   display: flex;
   flex-direction: column;
-
-
 }
 
-.sub-modal{
-  padding-left: 3rem;
-   flex-direction: column;
+.sub-modal {
+  width: 100%;
 }
 
 .sub-modal span {

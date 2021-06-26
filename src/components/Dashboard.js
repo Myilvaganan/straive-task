@@ -5,7 +5,7 @@ import { getData } from '../api/Axios';
 const Dashboard = () => {
 	/* const { response, setResponse } = useAxios(); */
 	const [ url, setUrl ] = useState('');
-	const [ doi, setDoi ] = useState('loading');
+	const [ doi, setDoi ] = useState('');
 	const [ check, setCheck ] = useState('');
 	const [ show, setShow ] = useState(false);
 	const [ disable, setDisable ] = useState(null);
@@ -48,19 +48,26 @@ const Dashboard = () => {
 								{!loading &&
 								url === content && (
 									<div className='sub-modal' style={{ display: url && show ? 'inherit' : 'none' }}>
-										{`${content}`} <span> {`${doi}`} </span>
+										<b>
+											{content +
+												`
+										 DOI: ${doi}
+										`}
+										</b>
 									</div>
 								)}
 							</div>
-
-							<button
-								key={index}
-								disabled={disable && check === title ? true : false}
-								onClick={(e) => modalHandler(e, index)}
-								className='btn btm-sm btn-success'
-							>
-								CrossRef Check
-							</button>
+							<div className='button-main'>
+								<button
+									type='button'
+									key={index}
+									disabled={disable && check === title ? true : false}
+									onClick={(e) => modalHandler(e, index)}
+									className='button btn-primary btn'
+								>
+									CrossRef Check
+								</button>
+							</div>
 						</div>
 					</Fragment>
 				);
